@@ -6,6 +6,6 @@ $.extend(Page.prototype, {
   },
 
   createHeader: function () {
-    this.header = new Header(0)
+    this.header = new Header(1)
   }
 })

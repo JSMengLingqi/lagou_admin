@@ -20,7 +20,7 @@ Header.template = `
           <li <% if(index == 0){ %>class="active"<% } %>>
             <a href="/">首页</a>
           </li>
-          <li <% if(index == 1){ %>class="active"<% } %>>
+          <li <% if(index == 1){ %>class=""<% } %>>
             <a href="/position">职位管理</a>
           </li>
         </ul>
@@ -41,7 +41,6 @@ $.extend(Header.prototype, {
   init: function () {
     this.createDom()
   },
-
   createDom: function () {
     this.element = new EJS({text: Header.template}).render({
       index: this.activeIndex,
@@ -51,5 +50,6 @@ $.extend(Header.prototype, {
 
     // 构建注册 dialog
     new SignUp()
+    new SignIn()
   }
 })
